@@ -1,7 +1,6 @@
 export default function HomePage() {
   return (
     <>
-      {/* CSS dans le head */}
       <style dangerouslySetInnerHTML={{
         __html: `
           @keyframes spin {
@@ -106,18 +105,55 @@ export default function HomePage() {
             </h1>
           </div>
 
-          <button className="hover-scale" style={{
-            background: 'linear-gradient(135deg, #059669, #22c55e)',
-            color: 'white',
-            border: 'none',
-            padding: '0.75rem 1.5rem',
-            borderRadius: '0.75rem',
-            fontWeight: '600',
-            cursor: 'pointer',
-            boxShadow: '0 4px 15px rgba(5, 150, 105, 0.3)'
+          {/* Navigation */}
+          <nav style={{
+            display: 'flex',
+            gap: '2rem',
+            alignItems: 'center'
           }}>
-            Accès Beta
-          </button>
+            <a href="/funds" style={{
+              color: '#4b5563',
+              textDecoration: 'none',
+              fontWeight: '500',
+              padding: '0.5rem 1rem',
+              borderRadius: '0.5rem',
+              transition: 'all 0.3s ease'
+            }}>
+              📊 Base de données
+            </a>
+            <a href="/dashboard" style={{
+              color: '#4b5563',
+              textDecoration: 'none',
+              fontWeight: '500',
+              padding: '0.5rem 1rem',
+              borderRadius: '0.5rem',
+              transition: 'all 0.3s ease'
+            }}>
+              📈 Dashboard
+            </a>
+            <a href="#" style={{
+              color: '#4b5563',
+              textDecoration: 'none',
+              fontWeight: '500',
+              padding: '0.5rem 1rem',
+              borderRadius: '0.5rem',
+              transition: 'all 0.3s ease'
+            }}>
+              🎯 Analytics
+            </a>
+            <button className="hover-scale" style={{
+              background: 'linear-gradient(135deg, #059669, #22c55e)',
+              color: 'white',
+              border: 'none',
+              padding: '0.75rem 1.5rem',
+              borderRadius: '0.75rem',
+              fontWeight: '600',
+              cursor: 'pointer',
+              boxShadow: '0 4px 15px rgba(5, 150, 105, 0.3)'
+            }}>
+              Accès Beta
+            </button>
+          </nav>
         </header>
 
         {/* Main Content */}
@@ -186,33 +222,38 @@ export default function HomePage() {
             alignItems: 'center',
             marginBottom: '4rem'
           }}>
-            <button className="hover-scale" style={{
+            <a href="/funds" style={{
+              display: 'inline-block',
               background: 'linear-gradient(135deg, #059669, #22c55e)',
               color: 'white',
-              border: 'none',
+              textDecoration: 'none',
               padding: '1.2rem 3rem',
               borderRadius: '1rem',
               fontSize: '1.2rem',
               fontWeight: '700',
-              cursor: 'pointer',
-              boxShadow: '0 10px 30px rgba(5, 150, 105, 0.3)'
-            }}>
-              🎯 Découvrir la démo interactive
-            </button>
+              boxShadow: '0 10px 30px rgba(5, 150, 105, 0.3)',
+              transition: 'all 0.3s ease'
+            }}
+            className="hover-scale">
+              🎯 Découvrir la base de données
+            </a>
             
-            <button className="hover-scale" style={{
+            <a href="/dashboard" style={{
+              display: 'inline-block',
               background: 'rgba(255, 255, 255, 0.9)',
               color: '#374151',
+              textDecoration: 'none',
               border: '2px solid rgba(5, 150, 105, 0.3)',
               padding: '1rem 2.5rem',
               borderRadius: '1rem',
               fontSize: '1.1rem',
               fontWeight: '600',
-              cursor: 'pointer',
-              backdropFilter: 'blur(10px)'
-            }}>
-              📚 Voir comment ça marche
-            </button>
+              backdropFilter: 'blur(10px)',
+              transition: 'all 0.3s ease'
+            }}
+            className="hover-scale">
+              📚 Voir le dashboard
+            </a>
           </div>
 
           {/* Statistiques */}
@@ -265,7 +306,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Section CTA */}
+          {/* Section de démonstration */}
           <div style={{
             marginTop: '4rem',
             padding: '3rem',
@@ -280,12 +321,86 @@ export default function HomePage() {
               marginBottom: '1rem',
               color: '#1f2937'
             }}>
-              Prêt à révolutionner vos investissements ?
+              Plateforme complète de private equity
             </h2>
             <p style={{
               color: '#6b7280',
               marginBottom: '2rem',
               fontSize: '1.1rem'
+            }}>
+              Base de données complète, dashboard investisseur, analytics avancées
+            </p>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+              gap: '1.5rem',
+              marginBottom: '2rem'
+            }}>
+              <a href="/funds" style={{
+                display: 'block',
+                background: 'rgba(5, 150, 105, 0.1)',
+                padding: '1.5rem',
+                borderRadius: '1rem',
+                textDecoration: 'none',
+                color: '#059669',
+                border: '2px solid rgba(5, 150, 105, 0.2)',
+                transition: 'all 0.3s ease'
+              }}
+              className="hover-scale">
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>📊</div>
+                <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>Base de données</div>
+                <div style={{ fontSize: '0.9rem', opacity: 0.8 }}>6 fonds avec filtres avancés</div>
+              </a>
+              
+              <a href="/dashboard" style={{
+                display: 'block',
+                background: 'rgba(59, 130, 246, 0.1)',
+                padding: '1.5rem',
+                borderRadius: '1rem',
+                textDecoration: 'none',
+                color: '#3b82f6',
+                border: '2px solid rgba(59, 130, 246, 0.2)',
+                transition: 'all 0.3s ease'
+              }}
+              className="hover-scale">
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>📈</div>
+                <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>Dashboard</div>
+                <div style={{ fontSize: '0.9rem', opacity: 0.8 }}>Portefeuille 3.1M€ (+25%)</div>
+              </a>
+              
+              <div style={{
+                background: 'rgba(245, 158, 11, 0.1)',
+                padding: '1.5rem',
+                borderRadius: '1rem',
+                color: '#f59e0b',
+                border: '2px solid rgba(245, 158, 11, 0.2)'
+              }}>
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎯</div>
+                <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>Analytics</div>
+                <div style={{ fontSize: '0.9rem', opacity: 0.8 }}>Bientôt disponible</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action final */}
+          <div style={{
+            marginTop: '4rem',
+            padding: '3rem',
+            background: 'linear-gradient(135deg, #059669, #22c55e)',
+            borderRadius: '2rem',
+            color: 'white'
+          }}>
+            <h2 style={{
+              fontSize: '2rem',
+              fontWeight: 'bold',
+              marginBottom: '1rem'
+            }}>
+              Prêt à révolutionner vos investissements ?
+            </h2>
+            <p style={{
+              marginBottom: '2rem',
+              fontSize: '1.1rem',
+              opacity: 0.9
             }}>
               Rejoignez les investisseurs qui font confiance à FundTribe
             </p>
@@ -301,15 +416,15 @@ export default function HomePage() {
                 style={{
                   padding: '1rem 1.5rem',
                   borderRadius: '0.75rem',
-                  border: '2px solid rgba(5, 150, 105, 0.3)',
+                  border: 'none',
                   fontSize: '1rem',
                   minWidth: '300px',
                   outline: 'none'
                 }}
               />
               <button className="hover-scale" style={{
-                background: 'linear-gradient(135deg, #059669, #22c55e)',
-                color: 'white',
+                background: 'white',
+                color: '#059669',
                 border: 'none',
                 padding: '1rem 2rem',
                 borderRadius: '0.75rem',
