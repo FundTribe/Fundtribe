@@ -102,6 +102,61 @@ export default function InvestorDashboard() {
       minHeight: '100vh',
       padding: '2rem'
     }}>
+      {/* Navigation */}
+      <nav style={{
+        background: 'rgba(255, 255, 255, 0.9)',
+        backdropFilter: 'blur(10px)',
+        borderRadius: '1rem',
+        padding: '1rem 2rem',
+        marginBottom: '2rem',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
+      }}>
+        <a href="/" style={{
+          fontSize: '1.8rem',
+          fontWeight: 'bold',
+          textDecoration: 'none',
+          background: 'linear-gradient(135deg, #059669, #22c55e)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>
+          FundTribe
+        </a>
+        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          <a href="/funds" style={{
+            color: '#4b5563',
+            textDecoration: 'none',
+            fontWeight: '500',
+            padding: '0.5rem 1rem',
+            borderRadius: '0.5rem'
+          }}>
+            📊 Base de données
+          </a>
+          <a href="/dashboard" style={{
+            color: '#059669',
+            textDecoration: 'none',
+            fontWeight: '600',
+            padding: '0.5rem 1rem',
+            background: 'rgba(5, 150, 105, 0.1)',
+            borderRadius: '0.5rem'
+          }}>
+            📈 Dashboard
+          </a>
+          <a href="/" style={{
+            color: '#4b5563',
+            textDecoration: 'none',
+            fontWeight: '500',
+            padding: '0.5rem 1rem',
+            borderRadius: '0.5rem'
+          }}>
+            🏠 Accueil
+          </a>
+        </div>
+      </nav>
+
       {/* Header Dashboard */}
       <div style={{
         background: 'rgba(255, 255, 255, 0.9)',
